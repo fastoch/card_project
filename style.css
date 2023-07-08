@@ -10,9 +10,13 @@
 img {
   display: block; /* removes the space that is by default under images because they are inline elements */
   max-width: 100%; /* images will not overflow their container */
-  height: auto; /* we added a height in the html, but this will make the height adjust to the width*/
+  height: auto; /* we set a height of 500px in index.html, but this will make the height adjust to the width*/
 }
 /* END OF RESET */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font: 1.5rem "Nunito", sans-serif; /* font-size & font-family */
@@ -68,6 +72,25 @@ footer {
 /* PROFILE CARD */
 .card {
   scroll-margin-top: 8rem; /* pushes images down so they are fully visible when using navbar links */
+  width: min(100%, 350px); /* selects the smallest value from a list of comma-separated expressions */
+  background-color: #cbd5e1;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card figcaption {
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.card p {
+  font-style: italic;
 }
 
 /* SMALL */
@@ -84,6 +107,15 @@ footer {
   body {
     background-color: gold;
     background-image: radial-gradient(whitesmoke, gold);
+  }
+
+  main {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav {
+    display: none;
   }
 }
 
@@ -112,5 +144,29 @@ footer {
 
   h1, h2 {
     font-size: 1.5rem;
+  }
+
+  .card {
+    width: min(100%, 180px);
+    scroll-margin-top: 5rem;
+  }
+
+  .card figcaption {
+    font-weight: bolder;
+    font-size: 1.1rem;
+    margin: 0.2rem;
+    text-align: center;
+  }
+
+  .card p {
+    font-size: 0.6em;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+
+  nav a {
+    font-size: 1.3rem;
   }
 }
