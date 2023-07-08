@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+img {
+  display: block; /* removes the space that is by default under images because they are inline elements */
+  max-width: 100%; /* images will not overflow their container */
+  height: auto; /* we added a height in the html, but this will make the height adjust to the width*/
+}
+/* END OF RESET */
 
 body {
   font: 1.5rem "Nunito", sans-serif; /* font-size & font-family */
